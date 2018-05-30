@@ -4,8 +4,8 @@
     <router-link to="/new" class="link">New Post</router-link>
     <h1>My Posts</h1>
     <div id="search">
-    <p>Search for post:</p>
-    <input type="text" v-model="search" placeholder="search">
+      <p>Search for post:</p>
+      <input type="text" v-model="search" placeholder="search">
     </div>
     <div v-for="blog in findBlog" class="one">
       <router-link v-bind:to="'/blog/' + blog.id">
@@ -71,6 +71,9 @@ $spaceGray: #d8dcff;
   }
   #search {
     display: flex;
+    p {
+      font-weight: 600;
+    }
     input {
       width: 50%;
       height: 100%;
