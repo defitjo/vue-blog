@@ -1,18 +1,12 @@
-# vue-blog
+# Vue-blog
 
-> A Vue.js project
+Blog app built using Vue.js and Firebase.
 
-## Build Setup
+The goal of this project is to continue my understanding of Vue.js and utilizing Firebase to store data.
 
-``` bash
-# install dependencies
-npm install
+Screenshots of app:
+![home](/home.png)
 
-# serve with hot reload at localhost:8080
-npm run dev
+![new](/new.png)
 
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![single](/single.png)
