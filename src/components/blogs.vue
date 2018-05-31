@@ -8,7 +8,7 @@
       <input type="text" v-model="search" placeholder="search">
     </div>
     <div v-for="blog in findBlog" class="one">
-      <router-link v-bind:to="'/blog/' + blog.id">
+      <router-link id="heading" v-bind:to="'/blog/' + blog.id">
         <h2>{{ blog.title }}</h2>
       </router-link>
       <section>{{ blog.content | portion }}</section>
@@ -69,6 +69,17 @@ $spaceGray: #d8dcff;
     font-size: 40px;
     text-align: center;
   }
+  #heading {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
   #search {
     display: flex;
     p {

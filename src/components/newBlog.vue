@@ -2,8 +2,8 @@
   <div id="new-blog">
     <router-link to="/" class="link">Home</router-link>
     <router-link to="/new" class="link">New Post</router-link>
-    <h2 v-if="!added">Create New Post</h2>
-    <form>
+    <form v-if="!added">
+      <h2>Create New Post</h2>
       <label>Title:</label>
       <input type="text" v-model="blog.title" required>
       <label>Author:</label>
@@ -22,7 +22,7 @@
       <button v-on:click.prevent="post">Add Post</button>
     </form>
     <div v-if="added">
-      <h2>Your Post has added</h2>
+      <h2>Post Added!</h2>
     </div>
     <div id="view">
       <h2>Post Preview</h2>
@@ -48,12 +48,13 @@ export default {
         categories: [],
         content: '',
       },
+      added: false,
     };
   },
   methods: {
     post() {
       this.$http.post('https://vue-js-practice-b5437.firebaseio.com/posts.json', this.blog).then(function(data) {
-        this.submitted = true;
+        this.added = true;
       });
     },
   },
@@ -112,4 +113,3 @@ $palePink: #f1ab86;
   }
 }
 </style>
-

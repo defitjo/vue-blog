@@ -8,7 +8,7 @@
       </form>
     </section>
     <section>
-      <a href="#">Devon</a>
+      <a href="https://github.com/defitjo" target="_blank">Devon</a>
     </section>
   </footer>
 </template>
