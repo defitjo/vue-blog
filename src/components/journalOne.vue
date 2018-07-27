@@ -1,13 +1,13 @@
 <template>
-  <div id="blog-one">
+  <div id="journal-one">
     <router-link to="/" class="link">Home</router-link>
     <router-link to="/new" class="link">New Post</router-link>
-    <h1>{{ blog.title }}</h1>
-    <p>Author: {{ blog.author }}</p>
+    <h1>{{ journal.title }}</h1>
+    <p>Author: {{ journal.author }}</p>
     <ul>
-      <li v-for="category in blog.categories">{{ category }}</li>
+      <li v-for="category in journal.categories">{{ category }}</li>
     </ul>
-    <section>{{ blog.content }}</section>
+    <section>{{ journal.content }}</section>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      blog: {},
+      journal: {},
     };
   },
   created() {
@@ -25,7 +25,7 @@ export default {
         return data.json();
       })
       .then(function(data) {
-        this.blog = data;
+        this.journal = data;
       });
   },
 };
@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 $palePink: #f1ab86;
 
-#blog-one {
+#journal-one {
   margin-left: 100px;
   max-width: 800px;
   .link {

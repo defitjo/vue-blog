@@ -1,9 +1,9 @@
-import blogs from './components/blogs.vue';
-import newBlog from './components/newBlog.vue';
-import blogOne from './components/blogOne.vue';
+import journals from './components/journals.vue';
+import newJournal from './components/newJournal.vue';
+import journalOne from './components/journalOne.vue';
 
 export default [
-  { path: '/', component: blogs },
-  { path: '/new', component: newBlog },
-  { path: '/blog/:id', component: blogOne },
+  { path: '/', component: journals },
+  { path: '/new', component: newJournal },
+  { path: '/journal/:id', component: journalOne },
 ];

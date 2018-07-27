@@ -9,15 +9,17 @@
 <script>
 import header from './components/header.vue';
 import footer from './components/footer.vue';
-import blogs from './components/blogs.vue';
-import newBlog from './components/newBlog.vue';
+import journals from './components/journals.vue';
+import newJournal from './components/newJournal.vue';
+import journalOne from './components/journalOne.vue';
 
 export default {
   components: {
     'app-header': header,
     'app-footer': footer,
-    'new-blog': newBlog,
-    'main-blogs': blogs,
+    'new-journal': newJournal,
+    'view-journal': journals,
+    'journal-one': journalOne,
   },
   data() {
     return {

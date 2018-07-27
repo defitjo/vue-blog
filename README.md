@@ -1,6 +1,6 @@
-# Vue-blog
+# Vue-journal
 
-Blog app built using Vue.js and Firebase.
+Journal app built using Vue.js and Firebase.
 
 The goal of this project is to continue my understanding of Vue.js and utilizing Firebase to store data.
 

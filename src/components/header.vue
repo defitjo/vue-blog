@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 id="head">Vue Js Blog</h1>
+    <h1 id="head">Vue Js Journal</h1>
   </header>
 </template>
 

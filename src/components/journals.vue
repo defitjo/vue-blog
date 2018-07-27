@@ -1,5 +1,5 @@
 <template>
-  <div id="view-blog">
+  <div id="view-journal">
     <router-link to="/" class="link">Home</router-link>
     <router-link to="/new" class="link">New Post</router-link>
     <h1>My Posts</h1>
@@ -7,22 +7,22 @@
       <p>Search for post:</p>
       <input type="text" v-model="search" placeholder="search">
     </div>
-    <div v-for="blog in findBlog" class="one">
-      <router-link id="heading" v-bind:to="'/blog/' + blog.id">
-        <h2>{{ blog.title }}</h2>
+    <div v-for="journal in findJournal" class="one">
+      <router-link id="heading" v-bind:to="'/journal/' + journal.id">
+        <h2>{{ journal.title }}</h2>
       </router-link>
-      <section>{{ blog.content | portion }}</section>
+      <section>{{ journal.content | portion }}</section>
     </div>
   </div>
 </template>
 
 <script>
-import findBlog from '../mixins/findBlog';
+import findJournal from '../mixins/findJournal';
 
 export default {
   data() {
     return {
-      blogs: [],
+      journals: [],
       search: '',
     };
   },
@@ -32,12 +32,12 @@ export default {
         return data.json();
       })
       .then(function (data) {
-        let myBlogs = [];
+        let myJournals = [];
         for (let key in data) {
           data[key].id = key;
-          myBlogs.push(data[key]);
+          myJournals.push(data[key]);
         };
-        this.blogs = myBlogs;
+        this.journals = myJournals;
       });
   },
   filters: {
@@ -45,7 +45,7 @@ export default {
       return val.slice(0, 100) + '...';
     },
   },
-  mixins: [findBlog],
+  mixins: [findJournal],
 };
 </script>
 
@@ -53,7 +53,7 @@ export default {
 $palePink: #f1ab86;
 $spaceGray: #d8dcff;
 
-#view-blog {
+#view-journal {
   display: inline-block;
   margin-left: 100px;
   .link {
